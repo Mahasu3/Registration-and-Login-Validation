@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" type="text/css" href="HomePage.css">
+</head>
+<body>
+    <div class="Sign-up-form">
+        <h1>Welcome <span id="username"></span></h1>
+        <p>Your credentials are verified.</p>
+        <hr>
+        <div class="or"> </div>
+       
+    </div>
+
+    <script>
+        // Get the value of the 'name' parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        
+        // Set the retrieved name value to the 'username' span element
+        document.getElementById('username').textContent = name;
+    </script>
+</body>
+</html>
